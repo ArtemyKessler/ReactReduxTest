@@ -1,0 +1,8 @@
+.infoPanel {
+  border: solid rgb(37, 102, 43) 2px;
+  background: rgb(184, 78, 78);
+  color: white;
+  font-weight: 600;
+  width: 621px;
+  text-align: center;
+}

@@ -1,0 +1,64 @@
+.filtersWithPages {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageSelector {
+  margin-top: 15px;
+  margin-left: 18px;
+  display: flex;
+}
+
+.pageSelector > input {
+  width: 35px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.filters div {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.addButton {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: 0.8em 1em calc(0.8em + 3px);
+  border-radius: 3px;
+  background: rgb(64, 199, 129);
+  box-shadow: 0 -3px rgb(53, 167, 110) inset;
+  transition: 0.2s;
+}
+
+.addButton:hover {
+  background: rgb(53, 167, 110);
+}
+.addButton:active {
+  background: rgb(33, 147, 90);
+  box-shadow: 0 3px rgb(33, 147, 90) inset;
+}
+
+.datepickers {
+  display: flex;
+  flex-direction: row;
+}
+
+@media all and (max-width: 900px) {
+  .filters {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .filters {
+    flex-direction: column;
+  }
+  .datepickers {
+    flex-direction: column;
+  }
+}

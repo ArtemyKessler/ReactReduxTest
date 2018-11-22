@@ -1,0 +1,112 @@
+.wholeTable {
+  margin-top: 2%;
+}
+
+table {
+  width: 100%;
+  background: #f2fffb;
+  border: 1px solid #494949;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 3px;
+}
+td {
+  text-align: center;
+  border-bottom: 1px solid #3a3a3a;
+}
+th {
+  background: #2aa559;
+  color: white;
+}
+tr:nth-child(2n) {
+  background: #c4e2cb;
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================================== */
+
+/* .tableHeader,
+.tableContent {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #494949;
+  padding: 3px;
+  align-items: center;
+}
+
+.tableContent > div,
+.tableHeader > div {
+  text-align: center;
+}
+
+.tableHeader :nth-child(1),
+.tableContent :nth-child(1),
+.tableHeader :nth-child(2),
+.tableContent :nth-child(2),
+.tableHeader :nth-child(4),
+.tableContent :nth-child(4) {
+  flex-grow: 1;
+}
+
+.tableHeader :nth-child(3),
+.tableContent :nth-child(3),
+.tableHeader :nth-child(5),
+.tableContent :nth-child(5) {
+  flex-grow: 3;
+}
+
+.tableHeader {
+  border-top: 1px solid #494949;
+  background: #2aa559;
+  color: white;
+  font-weight: 600;
+}
+
+.tableContent {
+  color: black;
+  background-color: #f2fffb;
+} */
+
+/* ==================================== */
+
+/* .tableContainer {
+  display: grid;
+  grid-template-columns: [number] 1fr [created] 1fr [bulletin] 3fr [rate] 1fr [user] 2fr;
+  grid-template-rows: [header] auto,
+    repeat(auto-fill, [content-start] auto [content-end]);
+  grid-auto-flow: row;
+  justify-content: center;
+}
+
+.tableContainer div,
+.tableHeader {
+  padding: 3px;
+  border-bottom: 1px solid #494949;
+  padding: 3px;
+  align-items: center;
+  text-align: center;
+}
+
+.tableHeader {
+  border-top: 1px solid #494949;
+  background: #2aa559;
+  color: white;
+  font-weight: 600;
+}
+
+.tableContainer div:not(.tableHeader) {
+  color: black;
+  background-color: #f2fffb;
+}
+
+.tableContainer div:not(.tableHeader):nth-child(2n) {
+  color: blue;
+  background-color: black;
+}
+ */

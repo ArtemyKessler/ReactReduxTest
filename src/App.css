@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+
+.App {
+  display: flex;
+  flex-direction: column;
+  font-family: "Merriweather", serif;
+}
+
+.App h1 {
+  align-self: flex-start;
+  color: rgb(11, 9, 15);
+}
