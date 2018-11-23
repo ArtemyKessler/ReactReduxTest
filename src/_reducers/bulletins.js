@@ -27,28 +27,8 @@ var initialBulletins = [
 
 export default function(state = initialBulletins, action) {
   switch (action.type) {
-    case "BULLETIN_ADD":
-      return state.concat(action.payload);
-    case "BULLETIN_DELETE":
-      const index = state.indexOf(action.payload);
-      state.splice(index, 1);
-      return state;
-    case "FILTER_CHANGE":
-      fetch("/api/Bulletin/GetByFilters", {
-        method: "POST",
-        body: JSON.stringify(action.payload),
-        headers: { "content-type": "application/json" }
-      })
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(json) {
-          state = json;
-        })
-        .catch(function(ex) {
-          alert("Fetching failed", ex);
-        });
-      return state;
+    case "BULLETINS_FETCHED":
+      return action.payload;
 
     default:
       return state;

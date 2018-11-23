@@ -20,7 +20,8 @@ export default function(state = initialFilter, action) {
   switch (action.type) {
     case "FILTER_CHANGE":
       return action.payload;
-
+    case "BULLETINS_FETCHED":
+      return state;
     default:
       return state;
   }

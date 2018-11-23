@@ -6,7 +6,7 @@ import { withRouter } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import { addBulletin } from "../_actions/addBulletin.js";
 import { saveBulletin } from "../_actions/addBulletin.js";
-import { deleteBulletin } from "../_actions/deleteBulletin.js";
+import { deleteBulletin } from "../_actions/addBulletin.js";
 import { select } from "../_actions/select.js";
 import { addUser } from "../_actions/addUser.js";
 
@@ -33,7 +33,7 @@ class Bulletin extends Component {
   }
 
   deleteButtonHandle() {
-    this.props.deleteBulletin(this.currentBulletin);
+    this.props.deleteBulletin(this.currentBulletin.id);
     this.backToTable();
   }
 

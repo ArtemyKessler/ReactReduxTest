@@ -1,7 +1,21 @@
+import { bulletinsFetched } from "./addBulletin";
+
 export const changeFilter = filter => {
-  return {
-    type: "FILTER_CHANGE",
-    payload: filter
+  return dispatch => {
+    fetch("http://ci2.dextechnology.com:8000/api/Bulletin/GetByFilters", {
+      method: "POST",
+      body: JSON.stringify(filter),
+      headers: { "content-type": "application/json" }
+    })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(json) {
+        dispatch(bulletinsFetched(json));
+      })
+      .catch(function(ex) {
+        alert("Fetching failed", ex);
+      });
   };
 };
 
