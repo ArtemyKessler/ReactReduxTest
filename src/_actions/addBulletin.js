@@ -1,9 +1,11 @@
+import initialFilter from "../_reducers/filter";
+
 export const getBulletins = () => {
   return dispatch => {
     dispatch(bulletinIsAdding("Начинаем загрузку объявлений"));
-    fetch("http://ci2.dextechnology.com:8000/api/Bulletin/GetByPage/1/100", {
+    fetch("http://ci2.dextechnology.com:8000/api/Bulletin/GetByFilters", {
       method: "POST",
-      body: JSON.stringify(bulletin),
+      body: JSON.stringify(initialFilter),
       headers: { "content-type": "application/json" }
     })
       .then(response => {
@@ -11,7 +13,12 @@ export const getBulletins = () => {
           throw Error(response.statusText);
         }
         dispatch(bulletinIsAdding("Загрузка завершена"));
-        dispatch(bulletinsFetched());
+      })
+      .then(response => {
+        return response.json();
+      })
+      .then(response => {
+        dispatch(bulletinsFetched(response));
       })
       .catch(() =>
         dispatch(bulletinIsAdding("Ошибка при загрузке объявлений"))
